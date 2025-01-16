@@ -105,7 +105,7 @@ namespace ClassIsland.Services.SpeechService
             var queryParams = new Dictionary<string, string>
             {
                 { "text", text },
-                { "text_langguage", settings.GPTSoVITSTextLang },
+                { "text_language", settings.GPTSoVITSTextLang },
                 { "cut_punc", "。，."}
             };
 
