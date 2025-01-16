@@ -116,7 +116,7 @@ namespace ClassIsland.Services.SpeechService
             };
 
             var queryString = string.Join("&", queryParams.Select(kvp => $"{kvp.Key}={Uri.EscapeDataString(kvp.Value)}"));
-            var requestUri = $"http://{serverIP}:{port}/tts?{queryString}";
+            var requestUri = $"http://{serverIP}:{port}?{queryString}";
 
             try
             {
