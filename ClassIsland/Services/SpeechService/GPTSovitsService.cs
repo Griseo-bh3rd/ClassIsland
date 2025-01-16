@@ -105,14 +105,8 @@ namespace ClassIsland.Services.SpeechService
             var queryParams = new Dictionary<string, string>
             {
                 { "text", text },
-                { "text_lang", settings.GPTSoVITSTextLang },
-                { "ref_audio_path", settings.GPTSoVITSRefAudioPath },
-                { "prompt_lang", settings.GPTSoVITSPromptLang },
-                { "prompt_text", settings.GPTSoVITSPromptText },
-                { "text_split_method", settings.GPTSoVITSTextSplitMethod },
-                { "batch_size", settings.GPTSoVITSBatchSize.ToString() },
-                { "media_type", "wav" },
-                { "streaming_mode", "false" }
+                { "text_langguage", settings.GPTSoVITSTextLang },
+                { "cut_punc", "。，."}
             };
 
             var queryString = string.Join("&", queryParams.Select(kvp => $"{kvp.Key}={Uri.EscapeDataString(kvp.Value)}"));
